@@ -57,7 +57,7 @@ const Technologies: FC<TechnologiesInterface> = ({ categories }) => {
                     <div className={styles.categories}>
                         {categories.map((category, index) => {
                             return (
-                                <div className={styles.category}>
+                                <div key={index} className={styles.category}>
                                     <h3
                                         className={styles.title}
                                         onClick={() =>
