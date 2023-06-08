@@ -1,0 +1,13 @@
+.header {
+    padding: 20px 0;
+    position: fixed;
+    background: rgba(25, 25, 25, .5);
+    width: 100%;
+    border-bottom: .025rem solid #ffffff50;
+    backdrop-filter: blur(15px);
+    z-index: 50;
+}
+
+.hidden {
+    transform: translateY(-100%) !important;
+}

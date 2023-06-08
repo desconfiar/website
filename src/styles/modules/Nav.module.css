@@ -1,0 +1,22 @@
+.list {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.link {
+    font-size: .95rem;
+    font-weight: 300;
+    color: #fff;
+    opacity: 75%;
+}
+
+.link:hover {
+    opacity: 100%;
+}
+
+@media (min-width: 768px) {
+    .list {
+        gap: 3.5rem;
+    }
+}

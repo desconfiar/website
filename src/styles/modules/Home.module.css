@@ -1,0 +1,20 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+}
+
+.heading {
+    background-color: #2AA5A0;
+    background-image: linear-gradient(120deg, #fa5560, #b14bf4, #4d91ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(3.875rem, 1.0715rem + 4.0175vw, 10rem);
+}
+
+.description {
+    font-size: clamp(1.15rem, 2.0175vw, 1.5rem);
+}

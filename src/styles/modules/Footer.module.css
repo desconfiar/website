@@ -1,0 +1,42 @@
+.footer {
+    padding: 50px 0;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    margin: 10px 0;
+}
+
+.text {
+    font-size: .75rem;
+    font-weight: 100;
+    opacity: .75;
+}
+
+.link {
+    filter: grayscale(100%);
+}
+
+.link:hover {
+    filter: grayscale(0%);
+}
+
+@media (min-width: 576px) {
+    .top {
+        justify-content: start;
+    }
+
+    .bottom {
+        justify-content: end;
+    }
+}
