@@ -17,9 +17,10 @@ const Projects: FC<ProjectsInterface> = ({ projects }) => {
                 <div className={styles.content}>
                     <Heading level={2}>Projects</Heading>
                     <div className={styles.container}>
-                        {projects.map((project) => {
+                        {projects.map((project, index) => {
                             return (
                                 <ProjectPreview
+                                    key={index}
                                     href={project.href}
                                     src={project.src}
                                     title={project.title}
