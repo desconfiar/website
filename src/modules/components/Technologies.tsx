@@ -11,11 +11,10 @@ import Container from '@/modules/layouts/Container'
 import Heading from '@/modules/ui/Heading'
 
 const Technologies: FC<TechnologiesInterface> = ({ categories }) => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches
+    const [isMobile, setIsMobile] = useState<boolean>(false)
 
-    const initial = Array(categories.length).fill(isMobile ? true : false)
-
-    const [isHidden, setIsHidden] = useState<Array<boolean>>([...initial])
+    const [initial, setInitial] = useState<Array<boolean>>([])
+    const [isHidden, setIsHidden] = useState<Array<boolean>>([])
 
     const handleClick = (index: number) => {
         const array = [...initial]
@@ -24,6 +23,14 @@ const Technologies: FC<TechnologiesInterface> = ({ categories }) => {
 
         setIsHidden(array)
     }
+
+    useEffect(() => {
+        setIsMobile(window.matchMedia('(max-width: 768px)').matches)
+    }, [])
+
+    useEffect(() => {
+        setInitial(Array(categories.length).fill(isMobile ? true : false))
+    }, [isMobile])
 
     useEffect(() => {
         const handleClick = (event: MouseEvent) => {
@@ -47,7 +54,7 @@ const Technologies: FC<TechnologiesInterface> = ({ categories }) => {
         return () => {
             window.removeEventListener('click', handleClick)
         }
-    }, [])
+    }, [initial])
 
     return (
         <div id='technologies'>

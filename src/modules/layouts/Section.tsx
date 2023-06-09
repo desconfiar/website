@@ -10,11 +10,12 @@ import { LayoutInterface } from '@/interfaces/LayoutInterface'
 
 const Section: FC<LayoutInterface> = ({ children }) => {
     const controls = useAnimation()
+
     const ref = useRef(null)
 
-    const isMobile = window.matchMedia('(max-width: 768px)').matches
-
     useEffect(() => {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
